@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Coming Soon",
-  description: "My portfolio is coming soon",
+  title: "Portfolio",
+  description: "My portfolio",
 };
 
 export default function RootLayout({
@@ -13,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body>
+        <Header />
         {children}
       </body>
     </html>

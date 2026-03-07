@@ -1,15 +1,15 @@
-"use client";
-
-import AnimatedShaderHero from "@/components/animated-shader-hero";
+import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
+import ProjectsSection from "@/components/projects-section";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
-    <AnimatedShaderHero
-      headline={{
-        line1: "Crafting",
-        line2: "Digital Experiences",
-      }}
-      subtitle="Building beautiful and functional web applications with modern technologies. Coming soon with my latest projects and experience."
-    />
+    <main className="w-full">
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <ContactSection />
+    </main>
   );
 }
