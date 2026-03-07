@@ -21,7 +21,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 // Reusable Shader Background Hook
 const useShaderBackground = ()=>{
     const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const animationFrameRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])();
+    const animationFrameRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(undefined);
     const rendererRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const pointersRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     // WebGL Renderer class
@@ -165,10 +165,10 @@ void main(){gl_Position=position;}`;
             gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer);
             gl.uniform2f(program.resolution, this.canvas.width, this.canvas.height);
             gl.uniform1f(program.time, now * 1e-3);
-            gl.uniform2f(program.move, ...this.mouseMove);
-            gl.uniform2f(program.touch, ...this.mouseCoords);
+            gl.uniform2f(program.move, this.mouseMove[0], this.mouseMove[1]);
+            gl.uniform2f(program.touch, this.mouseCoords[0], this.mouseCoords[1]);
             gl.uniform1i(program.pointerCount, this.nbrOfPointers);
-            gl.uniform2fv(program.pointers, this.pointerCoords);
+            gl.uniform2fv(program.pointers, new Float32Array(this.pointerCoords));
             gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
         }
     }
