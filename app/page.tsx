@@ -10,9 +10,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <HeroSection />
-      <section className="py-20 bg-white/50 backdrop-blur-sm">
-        <AboutMe />
-      </section>
+      <AboutMe />
     </main>
   );
 }

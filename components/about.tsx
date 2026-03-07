@@ -12,90 +12,85 @@ export default function AboutMe() {
                     font-family: 'Poppins', sans-serif;
                 }
             `}</style>
-            <div className="w-full">
-                <h1 className="text-4xl font-bold text-center mx-auto">About Me</h1>
-                <p className="text-base text-slate-600 text-center mt-3 max-w-2xl mx-auto">
-                    I'm a creative technologist with 5+ years of experience building across full-stack, game development, software, mobile apps, and 3D art. I approach every project with leadership, critical thinking, and an unwavering commitment to quality.
-                </p>
-                
-                <div className="relative max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 px-8 md:px-0 pt-16">
-                    <div className="size-[520px] -top-80 left-1/2 -translate-x-1/2 rounded-full absolute blur-[300px] -z-10 bg-indigo-100/50"></div>
+            <div className="w-full bg-neutral-950 py-20">
+                <div className="max-w-5xl mx-auto px-8 md:px-0">
+                    <h1 className="text-5xl font-bold text-center text-white">About Me</h1>
+                    <p className="text-lg text-slate-300 text-center mt-4 max-w-2xl mx-auto">
+                        I'm a creative technologist with 5+ years of experience building across full-stack, game development, software, mobile apps, and 3D art. I approach every project with leadership, critical thinking, and an unwavering commitment to quality.
+                    </p>
                     
-                    {/* Core Strengths */}
-                    <div>
-                        <div className="size-10 p-2 bg-blue-50 border border-blue-200 rounded">
-                            <span className="text-xl">💪</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-16">
+                        
+                        {/* Core Strengths */}
+                        <div className="group relative bg-gradient-to-br from-blue-900/40 to-blue-900/20 border border-blue-500/50 rounded-xl p-6 hover:border-blue-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">💪</div>
+                                <h3 className="text-lg font-semibold text-blue-200">Core Strengths</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    Public speaking, trustworthy leadership, critical thinking, and a strong presence. I bring clarity and confidence to every challenge.
+                                </p>
+                            </div>
                         </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Core Strengths</h3>
-                            <p className="text-sm text-slate-600">
-                                Public speaking, trustworthy leadership, critical thinking, and a strong presence. I bring clarity and confidence to every challenge.
-                            </p>
-                        </div>
-                    </div>
 
-                    {/* Diverse Expertise */}
-                    <div>
-                        <div className="size-10 p-2 bg-purple-50 border border-purple-200 rounded">
-                            <span className="text-xl">🎨</span>
+                        {/* Diverse Expertise */}
+                        <div className="group relative bg-gradient-to-br from-purple-900/40 to-purple-900/20 border border-purple-500/50 rounded-xl p-6 hover:border-purple-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">🎨</div>
+                                <h3 className="text-lg font-semibold text-purple-200">Full-Stack Mastery</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    Full-stack development, game design, mobile apps, software architecture, and 3D art. I don't just specialize—I explore everything.
+                                </p>
+                            </div>
                         </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Full-Stack Mastery</h3>
-                            <p className="text-sm text-slate-600">
-                                Full-stack development, game design, mobile apps, software architecture, and 3D art. I don't just specialize—I explore everything.
-                            </p>
-                        </div>
-                    </div>
 
-                    {/* Build Framework First */}
-                    <div>
-                        <div className="size-10 p-2 bg-emerald-50 border border-emerald-200 rounded">
-                            <span className="text-xl">🏗️</span>
+                        {/* Build Framework First */}
+                        <div className="group relative bg-gradient-to-br from-emerald-900/40 to-emerald-900/20 border border-emerald-500/50 rounded-xl p-6 hover:border-emerald-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">🏗️</div>
+                                <h3 className="text-lg font-semibold text-emerald-200">Structured Development</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    I build robust frameworks first, then craft experiences page by page. This ensures smooth UX and minimal bugs.
+                                </p>
+                            </div>
                         </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Structured Development</h3>
-                            <p className="text-sm text-slate-600">
-                                I build robust frameworks first, then craft experiences page by page. This ensures smooth UX and minimal bugs.
-                            </p>
-                        </div>
-                    </div>
 
-                    {/* Education */}
-                    <div>
-                        <div className="size-10 p-2 bg-indigo-50 border border-indigo-200 rounded">
-                            <span className="text-xl">🎓</span>
+                        {/* Education */}
+                        <div className="group relative bg-gradient-to-br from-indigo-900/40 to-indigo-900/20 border border-indigo-500/50 rounded-xl p-6 hover:border-indigo-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">🎓</div>
+                                <h3 className="text-lg font-semibold text-indigo-200">Data Science Foundation</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    BS in Data Science and Application from IIT Madras. Currently pursuing advanced studies while building in the real world.
+                                </p>
+                            </div>
                         </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Data Science Foundation</h3>
-                            <p className="text-sm text-slate-600">
-                                BS in Data Science and Application from IIT Madras. Currently pursuing advanced studies while building in the real world.
-                            </p>
-                        </div>
-                    </div>
 
-                    {/* Learning Philosophy */}
-                    <div>
-                        <div className="size-10 p-2 bg-orange-50 border border-orange-200 rounded">
-                            <span className="text-xl">🚀</span>
+                        {/* Learning Philosophy */}
+                        <div className="group relative bg-gradient-to-br from-orange-900/40 to-orange-900/20 border border-orange-500/50 rounded-xl p-6 hover:border-orange-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">🚀</div>
+                                <h3 className="text-lg font-semibold text-orange-200">Learn by Building</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    I get bored with theory alone. I learn by applying knowledge immediately in real projects. This drives innovation and depth.
+                                </p>
+                            </div>
                         </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Learn by Building</h3>
-                            <p className="text-sm text-slate-600">
-                                I get bored with theory alone. I learn by applying knowledge immediately in real projects. This drives innovation and depth.
-                            </p>
-                        </div>
-                    </div>
 
-                    {/* Mission */}
-                    <div>
-                        <div className="size-10 p-2 bg-rose-50 border border-rose-200 rounded">
-                            <span className="text-xl">✨</span>
-                        </div>
-                        <div className="mt-5 space-y-2">
-                            <h3 className="text-base font-medium text-slate-700">Making Education Accessible</h3>
-                            <p className="text-sm text-slate-600">
-                                Leading a team to make tech education free for everyone. Building exactly what we envision, step by step.
-                            </p>
+                        {/* Mission */}
+                        <div className="group relative bg-gradient-to-br from-rose-900/40 to-rose-900/20 border border-rose-500/50 rounded-xl p-6 hover:border-rose-400/80 transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/20">
+                            <div className="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="relative">
+                                <div className="text-4xl mb-4">✨</div>
+                                <h3 className="text-lg font-semibold text-rose-200">Making Education Accessible</h3>
+                                <p className="text-slate-300 text-sm mt-3">
+                                    Leading a team to make tech education free for everyone. Building exactly what we envision, step by step.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
