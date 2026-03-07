@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -45,6 +46,7 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
