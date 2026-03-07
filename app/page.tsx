@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero-section";
+import AboutMe from "@/components/about";
 
 export const metadata = {
   title: "Dialga - Full-Stack Developer Portfolio",
@@ -9,6 +10,9 @@ export default function Home() {
   return (
     <main className="w-full">
       <HeroSection />
+      <section className="py-20 bg-white/50 backdrop-blur-sm">
+        <AboutMe />
+      </section>
     </main>
   );
 }
