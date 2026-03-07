@@ -1,5 +1,8 @@
 import HeroSection from "@/components/hero-section";
 import AboutMe from "@/components/about";
+import ProjectsSection from "@/components/projects-section";
+import ContactSection from "@/components/contact-section";
+import { Footer } from "@/components/footer-section";
 
 export const metadata = {
   title: "Dialga - Full-Stack Developer Portfolio",
@@ -8,9 +11,12 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full bg-neutral-950">
       <HeroSection />
       <AboutMe />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
     </main>
   );
 }

@@ -1,87 +1,178 @@
-export default function ProjectsSection() {
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and real-time inventory management.",
-      tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "AI Chat Application",
-      description: "Real-time chat app powered by AI with smart responses and conversation history.",
-      tags: ["React", "Node.js", "WebSocket", "OpenAI"],
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Task Management Tool",
-      description: "Collaborative task manager with drag-and-drop, real-time sync, and team features.",
-      tags: ["Next.js", "Prisma", "Tailwind", "Firebase"],
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Analytics Dashboard",
-      description: "Interactive data visualization dashboard for tracking business metrics and KPIs.",
-      tags: ["React", "D3.js", "TypeScript", "REST API"],
-      link: "#",
-    },
-  ];
+"use client";
 
+import React, { useState } from "react";
+import { RevealWaveImage } from "@/components/reveal-wave-image";
+
+const projects = [
+  {
+    title: "United Earth Labs",
+    description:
+      "A startup focused on innovating human technology to accelerate our path toward becoming a Type 1 civilization on the Kardashev scale.",
+    tags: ["Startup", "Deep Tech", "Innovation"],
+    status: "Active",
+  },
+  {
+    title: "FaceReco",
+    description:
+      "A surveillance software capable of detecting and cross-referencing leaked information. Discontinued due to high risk of misuse.",
+    tags: ["Python", "OpenCV", "Deep Learning"],
+    status: "Archived",
+  },
+  {
+    title: "Terminal Academy",
+    description:
+      "A free-to-use platform where students can learn tech — no paywalls, no barriers. Education should be accessible to everyone.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "RightWrongCounter",
+    description:
+      "A simple counter app built out of necessity — couldn't find the one I needed, so I made my own.",
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "Game Collection",
+    description:
+      "Multiple games built from scratch because I couldn't find the games I wanted to play. If it doesn't exist, build it.",
+    tags: ["Unity", "C#", "Game Design"],
+  },
+  {
+    title: "3D Models & Renders",
+    description:
+      "A collection of 3D models, animations, and photorealistic renders created across various personal and creative projects.",
+    tags: ["Blender", "3D Art", "Animation"],
+  },
+];
+
+export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-28 bg-white dark:bg-[#050505]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <p className="text-sm font-medium uppercase tracking-widest text-indigo-500 mb-3">
-            Portfolio
+    <section id="projects" className="relative w-full" style={{ minHeight: "100vh" }}>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+        <RevealWaveImage
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
+          className="h-full w-full"
+          waveSpeed={0.3}
+          waveAmplitude={0.15}
+          revealRadius={0.25}
+        />
+      </div>
+
+      <div
+        className="relative z-10"
+        style={{
+          padding: "6rem clamp(2rem, 8vw, 8rem)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "3rem",
+        }}
+      >
+        <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+          <p
+            style={{
+              color: "#818cf8",
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              marginBottom: "0.75rem",
+            }}
+          >
+            Projects
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-            Featured Projects
+          <h2
+            style={{
+              fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+              fontWeight: 700,
+              color: "white",
+              lineHeight: 1.15,
+            }}
+          >
+            Things I&apos;ve built.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.link}
-              className="group relative block rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] p-8 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-            >
-              <span className="absolute top-6 right-6 text-6xl font-bold text-gray-100 dark:text-white/[0.04] select-none leading-none">
-                0{project.id}
-              </span>
-
-              <div className="relative flex flex-col h-full">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-500 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-500 dark:text-white/50 mb-8 flex-grow leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-medium px-3 py-1 rounded-full bg-white dark:bg-white/10 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/5"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity text-indigo-500 ml-4 flex-shrink-0">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "1.5rem",
+            maxWidth: "1100px",
+            margin: "0 auto",
+            width: "100%",
+          }}
+        >
+          {projects.map((project) => {
+            return (
+              <ProjectCard key={project.title} project={project} />
+            );
+          })}
         </div>
       </div>
     </section>
+  );
+}
+
+function ProjectCard({ project }: { project: typeof projects[number] }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: hovered ? "rgba(20,20,35,0.95)" : "rgba(10,10,20,0.85)",
+        border: hovered ? "1px solid rgba(99,102,241,0.3)" : "1px solid rgba(255,255,255,0.12)",
+        borderRadius: "1rem",
+        padding: "1.75rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+        transition: "border-color 0.3s, background 0.3s",
+        backdropFilter: "blur(12px)",
+      }}
+    >
+      {project.status && (
+        <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "flex-start" }}>
+          <span
+            style={{
+              fontSize: "0.7rem",
+              color: project.status === "Active" ? "#4ade80" : "#f87171",
+              border: `1px solid ${project.status === "Active" ? "rgba(74,222,128,0.3)" : "rgba(248,113,113,0.3)"}`,
+              borderRadius: "9999px",
+              padding: "0.15rem 0.6rem",
+              fontWeight: 500,
+            }}
+          >
+            {project.status}
+          </span>
+        </div>
+      )}
+
+      <h3 style={{ fontSize: "1.125rem", fontWeight: 600, color: "white" }}>
+        {project.title}
+      </h3>
+
+      <p style={{ fontSize: "0.875rem", color: "#94a3b8", lineHeight: 1.7 }}>
+        {project.description}
+      </p>
+
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "auto" }}>
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            style={{
+              fontSize: "0.7rem",
+              color: "#94a3b8",
+              background: "rgba(255,255,255,0.06)",
+              borderRadius: "9999px",
+              padding: "0.2rem 0.65rem",
+              fontWeight: 500,
+            }}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
