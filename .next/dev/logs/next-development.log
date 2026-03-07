@@ -243,3 +243,4 @@ Import trace:
     ./components/skills-section.tsx
     ./app/page.tsx
 [00:01:34.741] Server  LOG     ✓ Compiled in 67ms
+[00:28:44.614] Server  LOG     ✓ Compiled in 161ms

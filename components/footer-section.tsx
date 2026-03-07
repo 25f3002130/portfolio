@@ -46,8 +46,8 @@ const footerLinks: FooterSection[] = [
 	{
 		label: 'Connect',
 		links: [
-			{ title: 'GitHub', href: 'https://github.com/25f3002130', icon: GithubIcon },
-			{ title: 'Email', href: 'mailto:hello@example.com', icon: MailIcon },
+			{ title: 'GitHub', href: 'https://github.com/dialga-cmd', icon: GithubIcon },
+			{ title: 'Email', href: 'mailto:aditya@worldaditya.dev', icon: MailIcon },
 		],
 	},
 ];
