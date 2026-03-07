@@ -71,7 +71,7 @@ export function Footer() {
 												className="hover:text-white"
 												style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", transition: "color 0.3s" }}
 											>
-												{link.icon && <link.icon style={{ width: "1rem", height: "1rem", marginRight: "0.25rem" }} />}
+												{link.icon && <link.icon className="w-4 h-4 mr-1" />}
 												{link.title}
 											</a>
 										</li>
