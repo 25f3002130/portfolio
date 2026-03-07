@@ -50,19 +50,21 @@ export default function ContactSection() {
       id="contact"
       style={{
         display: "grid",
+        gridTemplateRows: "1fr",
+        gridTemplateColumns: "1fr",
         width: "100%",
         minHeight: "100vh",
         background: "black",
       }}
     >
-      {/* Background canvas — grid overlap, no positioning, no z-index */}
+      {/* Background canvas — grid overlap */}
       <div
         aria-hidden="true"
         style={{
-          gridRow: "1 / -1",
-          gridColumn: "1 / -1",
+          gridRow: 1,
+          gridColumn: 1,
           pointerEvents: "none",
-          minHeight: "100vh",
+          overflow: "hidden",
         }}
       >
         <NeuralBackground
@@ -76,15 +78,14 @@ export default function ContactSection() {
       {/* Content — same grid cell, paints on top due to DOM order */}
       <div
         style={{
-          gridRow: "1 / -1",
-          gridColumn: "1 / -1",
+          gridRow: 1,
+          gridColumn: 1,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           padding: "2rem",
           textAlign: "center",
-          minHeight: "100vh",
         }}
       >
         <p
