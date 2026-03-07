@@ -70,16 +70,16 @@ export default function AboutMe() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-6"
+          className="flex flex-col items-center mb-6"
         >
-          <h2 className="text-3xl font-semibold text-white">About Me</h2>
-          <p className="text-sm text-slate-400 mt-3 max-w-lg mx-auto leading-relaxed">
+          <h2 className="text-3xl font-semibold text-white text-center">About Me</h2>
+          <p className="text-sm text-slate-400 mt-3 max-w-lg text-center leading-relaxed">
             A multi-disciplinary developer with 5+ years of experience — currently studying Data Science at IIT Madras while building across every platform imaginable.
           </p>
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 pt-16">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 pt-16 place-items-center">
           {highlights.map((item, i) => (
             <motion.div
               key={item.title}
