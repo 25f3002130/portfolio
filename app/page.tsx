@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import AboutMe from "@/components/about";
+import SkillsSection from "@/components/skills-section";
 import ProjectsSection from "@/components/projects-section";
 import ContactSection from "@/components/contact-section";
 import { Footer } from "@/components/footer-section";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="w-full bg-neutral-950">
       <HeroSection />
       <AboutMe />
+      <SkillsSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
