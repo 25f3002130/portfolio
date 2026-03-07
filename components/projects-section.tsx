@@ -31,8 +31,8 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gray-50 dark:bg-[#0a0a0a]">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-28 bg-white dark:bg-[#050505]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-sm font-medium uppercase tracking-widest text-indigo-500 mb-3">
             Portfolio
@@ -42,35 +42,41 @@ export default function ProjectsSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <a
               key={project.id}
               href={project.link}
-              className="group relative block rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all duration-300 hover:shadow-lg"
+              className="group relative block rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] p-8 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="flex flex-col h-full">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-500 transition-colors">
+              <span className="absolute top-6 right-6 text-6xl font-bold text-gray-100 dark:text-white/[0.04] select-none leading-none">
+                0{project.id}
+              </span>
+
+              <div className="relative flex flex-col h-full">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-500 dark:text-white/50 mb-6 flex-grow">
+                <p className="text-gray-500 dark:text-white/50 mb-8 flex-grow leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/60"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-medium px-3 py-1 rounded-full bg-white dark:bg-white/10 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity text-indigo-500 ml-4 flex-shrink-0">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity text-indigo-500">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
               </div>
             </a>
           ))}
