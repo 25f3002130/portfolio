@@ -88,12 +88,14 @@ export default function AboutMe() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               viewport={{ once: true }}
             >
-              <div className="size-10 p-2 bg-indigo-950 border border-indigo-800 rounded flex items-center justify-center text-indigo-400">
-                {item.icon}
-              </div>
-              <div className="mt-5 space-y-2">
-                <h3 className="text-base font-medium text-slate-100">{item.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              <div className="flex flex-col items-center text-center">
+                <div className="size-10 p-2 bg-indigo-950 border border-indigo-800 rounded flex items-center justify-center text-indigo-400">
+                  {item.icon}
+                </div>
+                <div className="mt-5 space-y-2">
+                  <h3 className="text-base font-medium text-slate-100">{item.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             </motion.div>
           ))}
