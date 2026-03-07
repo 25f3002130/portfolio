@@ -54,6 +54,7 @@ export default function ContactSection() {
         height: "100vh",
         overflow: "hidden",
         background: "black",
+        zIndex: 1,
       }}
     >
       {/* Background canvas — absolutely no pointer events */}
@@ -81,7 +82,7 @@ export default function ContactSection() {
       <div
         style={{
           position: "relative",
-          zIndex: 990,
+          zIndex: 1,
           width: "100%",
           height: "100%",
           display: "flex",

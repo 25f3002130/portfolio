@@ -246,3 +246,244 @@ Import trace:
 [00:28:44.614] Server  LOG     ✓ Compiled in 161ms
 [00:28:58.167] Server  LOG     ✓ Compiled in 65ms
 [00:33:16.515] Server  LOG     ✓ Compiled in 194ms
+[00:33:33.577] Server  LOG     ✓ Compiled in 67ms
+[00:34:41.620] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:34:47.687] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:48.242] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:34:48.242] Browser WARN    WARNING: Multiple instances of Three.js being imported.
+[00:34:49.192] Browser WARN    updating from  114 to  122
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.192] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:34:49.193] Browser ASSERT  true
+[00:35:45.813] Server  LOG     ✓ Compiled in 146ms
+[00:35:50.597] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:50.988] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:35:50.988] Browser WARN    WARNING: Multiple instances of Three.js being imported.
+[00:35:51.740] Browser WARN    updating from  114 to  122
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:35:51.740] Browser ASSERT  true
+[00:36:01.785] Server  LOG     ✓ Compiled in 273ms
+[00:36:12.861] Server  LOG     ✓ Compiled in 127ms
+[00:36:21.034] Server  LOG     ✓ Compiled in 129ms
+[00:36:27.409] Server  LOG     ✓ Compiled in 263ms
+[00:36:34.401] Server  LOG     ✓ Compiled in 127ms
+[00:37:22.991] Server  LOG     ✓ Compiled in 161ms
+[00:37:30.511] Server  LOG     ✓ Compiled in 147ms
+[00:37:34.817] Server  LOG     ✓ Compiled in 130ms
+[00:37:38.761] Server  LOG     ✓ Compiled in 150ms
+[00:37:42.359] Server  LOG     ✓ Compiled in 67ms
+[00:37:47.557] Server  LOG     ✓ Compiled in 143ms
+[00:37:53.330] Server  LOG     ✓ Compiled in 63ms
+[00:38:06.691] Server  LOG     ✓ Compiled in 63ms
+[00:38:14.026] Server  LOG     ✓ Compiled in 103ms
