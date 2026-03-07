@@ -49,24 +49,20 @@ export default function ContactSection() {
     <section
       id="contact"
       style={{
-        position: "relative",
+        display: "grid",
         width: "100%",
-        height: "100vh",
-        overflow: "hidden",
+        minHeight: "100vh",
         background: "black",
       }}
     >
-      {/* Background canvas — absolutely no pointer events */}
+      {/* Background canvas — grid overlap, no positioning, no z-index */}
       <div
         aria-hidden="true"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
+          gridRow: "1 / -1",
+          gridColumn: "1 / -1",
           pointerEvents: "none",
+          minHeight: "100vh",
         }}
       >
         <NeuralBackground
@@ -77,18 +73,18 @@ export default function ContactSection() {
         />
       </div>
 
-      {/* Content — normal flow, relative z-index, all clicks work */}
+      {/* Content — same grid cell, paints on top due to DOM order */}
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
+          gridRow: "1 / -1",
+          gridColumn: "1 / -1",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           padding: "2rem",
           textAlign: "center",
+          minHeight: "100vh",
         }}
       >
         <p
