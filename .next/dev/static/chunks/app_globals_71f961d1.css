@@ -614,6 +614,10 @@
     z-index: 100;
   }
 
+  .z-\[110\] {
+    z-index: 110;
+  }
+
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -2600,6 +2604,18 @@
     .md\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:\!hidden {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:block {
+      display: block;
     }
   }
 
