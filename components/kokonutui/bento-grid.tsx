@@ -744,7 +744,7 @@ export default function BentoGrid() {
                     GitHub
                     <ArrowUpRight className="ml-auto h-4 w-4 opacity-50" />
                   </a>
-                  <a href="mailto:your.email@example.com" className="flex items-center gap-3 rounded-lg border border-neutral-200 dark:border-neutral-700 p-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                  <a href="mailto:aditya@worldaditya.dev" className="flex items-center gap-3 rounded-lg border border-neutral-200 dark:border-neutral-700 p-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                     Email Me
                     <ArrowUpRight className="ml-auto h-4 w-4 opacity-50" />
