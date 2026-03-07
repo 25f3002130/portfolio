@@ -2,6 +2,9 @@
   "app": {
     "[project]/app/home/page": [
       "static/media/a624dffa201843ff-s.p.91936907.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/a624dffa201843ff-s.p.91936907.woff2"
     ]
   },
   "appUsingSizeAdjust": true,
