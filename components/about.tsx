@@ -1,24 +1,19 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { SplineScene } from "@/components/ui/splite";
 
 export default function AboutMe() {
   return (
     <section className="w-full bg-neutral-950">
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Image */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-white/10">
-              <Image
-                src="/profile.jpg"
-                alt="Aditya"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+          {/* Left - Spline 3D Profile */}
+          <div className="relative h-[400px] md:h-[500px] w-full">
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9wHuwm/scene.splinecode"
+              className="w-full h-full"
+            />
           </div>
 
           {/* Right - Text */}
