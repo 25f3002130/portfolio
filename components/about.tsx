@@ -1,229 +1,103 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useInView } from "motion/react";
+import React from "react";
+import { motion } from "motion/react";
 
-const skills = [
-  { name: "React / Next.js", level: 92 },
-  { name: "TypeScript", level: 88 },
-  { name: "Python", level: 85 },
-  { name: "Game Development", level: 80 },
-  { name: "3D Art / Blender", level: 75 },
-  { name: "Mobile (React Native)", level: 78 },
+const highlights = [
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+    title: "Full-Stack & Beyond",
+    desc: "Web, mobile, games, desktop software, and 3D art — I build across every platform because one domain is never enough.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+      </svg>
+    ),
+    title: "IIT Madras",
+    desc: "BS in Data Science & Application — combining academic rigor with real-world engineering.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L12 4.37m-5.68 5.7h11.8M4.26 19.22A10.477 10.477 0 0 1 1.934 12C1.934 6.443 6.443 1.934 12 1.934S22.066 6.443 22.066 12 17.557 22.066 12 22.066a10.477 10.477 0 0 1-7.74-3.404" />
+      </svg>
+    ),
+    title: "Framework-First Approach",
+    desc: "I build the foundation first, then craft each experience — ensuring smooth UX with minimal bugs.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+      </svg>
+    ),
+    title: "Learn by Building",
+    desc: "Theory bores me. I learn by shipping real products — the end result is always worth the struggle.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+      </svg>
+    ),
+    title: "Leadership & Communication",
+    desc: "Public speaking, critical thinking, and presence of mind — I lead teams and communicate with clarity.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
+    title: "Boundless Curiosity",
+    desc: "I explore everything a human possibly can — one subject is never enough to keep me engaged.",
+  },
 ];
-
-const timeline = [
-  { year: "2020", title: "Started Coding", desc: "First lines of code — instantly hooked." },
-  { year: "2022", title: "Full-Stack Projects", desc: "Built real products end-to-end." },
-  { year: "2024", title: "IIT Madras", desc: "BS in Data Science & Application." },
-  { year: "2026", title: "Building the Future", desc: "Leading teams, shipping products." },
-];
-
-function SkillBar({ name, level, delay }: { name: string; level: number; delay: number }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex justify-between text-sm">
-        <span className="text-slate-200 font-medium">{name}</span>
-        <span className="text-slate-400">{level}%</span>
-      </div>
-      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
-          initial={{ width: 0 }}
-          animate={isInView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1.2, delay, ease: "easeOut" }}
-        />
-      </div>
-    </div>
-  );
-}
-
-function StatCard({ value, label, delay }: { value: string; label: string; delay: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true }}
-      className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur"
-    >
-      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-        {value}
-      </div>
-      <div className="text-sm text-slate-400 mt-2">{label}</div>
-    </motion.div>
-  );
-}
 
 export default function AboutMe() {
   return (
-    <section className="w-full bg-neutral-950 relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-indigo-900/20 blur-[180px] pointer-events-none" />
-
-      <div className="relative max-w-6xl mx-auto px-6 md:px-8 py-28">
-
-        {/* Section Header */}
+    <section className="w-full bg-neutral-950 relative">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 py-28">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-6"
         >
-          <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-3">
-            Get to know me
+          <h2 className="text-3xl font-semibold text-white">About Me</h2>
+          <p className="text-sm text-slate-400 mt-3 max-w-lg mx-auto leading-relaxed">
+            A multi-disciplinary developer with 5+ years of experience — currently studying Data Science at IIT Madras while building across every platform imaginable.
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">
-            About Me
-          </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
 
-        {/* Bio + Stats Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-24">
-          {/* Bio - takes 3 cols */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:col-span-3 space-y-6"
-          >
-            <h3 className="text-2xl font-semibold text-white">
-              I build things across <span className="text-indigo-400">every platform</span>.
-            </h3>
-            <p className="text-slate-300 leading-relaxed">
-              I'm a full-stack developer, game developer, mobile app developer, software engineer, and 3D artist with over 5 years of experience. I don't believe in being limited to one discipline — I get bored learning just one thing, so I explore and build across everything a human possibly can.
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              Currently pursuing a <span className="text-white font-medium">BS in Data Science & Application from IIT Madras</span>, I combine academic rigor with hands-on building. My approach is simple: build the framework first, then craft each page to ensure users get the smoothest experience with as few bugs as possible.
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              What drives me? Being able to make <span className="text-white font-medium">exactly</span> what I envision. It can be hard, but the end result is always worth it.
-            </p>
-          </motion.div>
-
-          {/* Stats - takes 2 cols */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-4 content-start">
-            <StatCard value="5+" label="Years Experience" delay={0.1} />
-            <StatCard value="6+" label="Disciplines" delay={0.2} />
-            <StatCard value="IIT" label="Madras Student" delay={0.3} />
-            <StatCard value="∞" label="Curiosity" delay={0.4} />
-          </div>
+        {/* Cards Grid */}
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12 pt-16">
+          {highlights.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              viewport={{ once: true }}
+            >
+              <div className="size-10 p-2 bg-indigo-950 border border-indigo-800 rounded flex items-center justify-center text-indigo-400">
+                {item.icon}
+              </div>
+              <div className="mt-5 space-y-2">
+                <h3 className="text-base font-medium text-slate-100">{item.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Skills + What I Bring Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-          {/* Technical Skills */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-semibold text-white mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm">
-                &#60;/&#62;
-              </span>
-              Technical Skills
-            </h3>
-            <div className="space-y-5">
-              {skills.map((skill, i) => (
-                <SkillBar key={skill.name} name={skill.name} level={skill.level} delay={i * 0.1} />
-              ))}
-            </div>
-          </motion.div>
-
-          {/* What I Bring */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-semibold text-white mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm">
-                ★
-              </span>
-              What I Bring to the Table
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { icon: "🎤", title: "Public Speaking", desc: "Confident communicator who can present ideas clearly." },
-                { icon: "🤝", title: "Trustworthy", desc: "Reliable teammate who delivers on every commitment." },
-                { icon: "👑", title: "Leadership", desc: "Natural leader who guides teams towards shared goals." },
-                { icon: "🧠", title: "Critical Thinking", desc: "Analytical mind that solves problems at their root." },
-                { icon: "⚡", title: "Presence of Mind", desc: "Quick thinker who adapts to any situation on the fly." },
-                { icon: "🔭", title: "Endless Curiosity", desc: "Always exploring new domains, never settling for one." },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-colors duration-300"
-                >
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <h4 className="text-white font-medium text-sm mb-1">{item.title}</h4>
-                  <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Journey Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-xl font-semibold text-white mb-10 text-center flex items-center justify-center gap-3">
-            <span className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm">
-              ◆
-            </span>
-            My Journey
-          </h3>
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500/50 via-purple-500/50 to-emerald-500/50 hidden md:block" />
-
-            <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-4 md:gap-8">
-              {timeline.map((item, i) => (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  viewport={{ once: true }}
-                  className="relative text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-white font-bold text-sm mb-4 shadow-lg shadow-indigo-500/25">
-                    {item.year.slice(2)}
-                  </div>
-                  <h4 className="text-white font-semibold text-sm mb-1">{item.title}</h4>
-                  <p className="text-slate-400 text-xs">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Philosophy Quote */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-24 text-center"
-        >
-          <blockquote className="text-xl md:text-2xl text-slate-300 italic max-w-3xl mx-auto leading-relaxed">
-            "I don't learn to learn — I learn to <span className="text-indigo-400 font-medium not-italic">build</span>. The best way to understand something is to create it."
-          </blockquote>
-        </motion.div>
-
       </div>
     </section>
   );
