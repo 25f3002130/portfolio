@@ -81,7 +81,7 @@ export default function ContactSection() {
       <div
         style={{
           position: "relative",
-          zIndex: 99,
+          zIndex: 990,
           width: "100%",
           height: "100%",
           display: "flex",
@@ -131,7 +131,7 @@ export default function ContactSection() {
         <div style={{ display: "flex", gap: "2rem", marginBottom: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#cbd5e1", fontSize: "0.95rem" }}>
             <Mail style={{ width: "1.15rem", height: "1.15rem", color: "#818cf8" }} />
-            hello@example.com
+            adityaraj1234@duck.com
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#cbd5e1", fontSize: "0.95rem" }}>
