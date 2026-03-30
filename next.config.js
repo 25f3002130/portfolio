@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  rewrites: async () => {
+    return {
+      beforeFiles: [
+        {
+          source: '/.well-known/:path*',
+          destination: '/api/.well-known/:path*'
+        }
+      ]
+    }
+  }
 }
 
-export default nextConfig
+module.exports = nextConfig
