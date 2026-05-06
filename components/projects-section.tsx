@@ -2,8 +2,25 @@
 
 import React, { useState } from "react";
 import { RevealWaveImage } from "@/components/reveal-wave-image";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
+  {
+    title: "MediaPull",
+    description:
+      "A universal media downloader platform. Currently supports YouTube and Instagram, with ongoing development to support 500+ websites including X (Twitter), TikTok, and more.",
+    tags: ["Next.js", "Python", "Media", "API"],
+    status: "Active",
+    link: "https://github.com/25f3002130/MediaPull",
+  },
+  {
+    title: "ZINCxNH",
+    description:
+      "Advanced AI code reviewer platform where users can input their code and receive real-time feedback from state-of-the-art AI models for better updates and code quality.",
+    tags: ["AI/ML", "React", "Code Review", "LLM"],
+    status: "Active",
+    link: "https://github.com/25f3002130/ai-code-reviewer",
+  },
   {
     title: "United Earth Labs",
     description:
@@ -12,23 +29,11 @@ const projects = [
     status: "Active",
   },
   {
-    title: "FaceReco",
-    description:
-      "A surveillance software capable of detecting and cross-referencing leaked information. Discontinued due to high risk of misuse.",
-    tags: ["Python", "OpenCV", "Deep Learning"],
-    status: "Archived",
-  },
-  {
     title: "Terminal Academy",
     description:
       "A free-to-use platform where students can learn tech — no paywalls, no barriers. Education should be accessible to everyone.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "RightWrongCounter",
-    description:
-      "A simple counter app built out of necessity — couldn't find the one I needed, so I made my own.",
-    tags: ["React", "JavaScript"],
+    status: "Active",
   },
   {
     title: "Game Collection",
@@ -81,22 +86,23 @@ export default function ProjectsSection() {
           </p>
           <h2
             style={{
-              fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
-              fontWeight: 700,
+              fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
+              fontWeight: 800,
               color: "white",
-              lineHeight: 1.15,
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em"
             }}
           >
-            Things I&apos;ve built.
+            Selected <span style={{ color: "#818cf8" }}>Work</span>
           </h2>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "1.5rem",
-            maxWidth: "1100px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+            gap: "2rem",
+            maxWidth: "1200px",
             margin: "0 auto",
             width: "100%",
           }}
@@ -120,53 +126,90 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "rgba(20,20,35,0.95)" : "rgba(10,10,20,0.85)",
-        border: hovered ? "1px solid rgba(99,102,241,0.3)" : "1px solid rgba(255,255,255,0.12)",
-        borderRadius: "1rem",
-        padding: "1.75rem",
+        background: hovered ? "rgba(20,20,35,0.7)" : "rgba(10,10,20,0.4)",
+        border: hovered ? "1px solid rgba(99,102,241,0.3)" : "1px solid rgba(255,255,255,0.05)",
+        borderRadius: "1.5rem",
+        padding: "2rem",
         display: "flex",
         flexDirection: "column",
-        gap: "1rem",
-        transition: "border-color 0.3s, background 0.3s",
-        backdropFilter: "blur(12px)",
+        gap: "1.25rem",
+        transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        backdropFilter: "blur(16px)",
+        boxShadow: hovered ? "0 20px 40px -20px rgba(0,0,0,0.5)" : "none",
+        transform: hovered ? "translateY(-5px)" : "translateY(0)",
       }}
     >
-      {project.status && (
-        <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "flex-start" }}>
-          <span
-            style={{
-              fontSize: "0.7rem",
-              color: project.status === "Active" ? "#4ade80" : "#f87171",
-              border: `1px solid ${project.status === "Active" ? "rgba(74,222,128,0.3)" : "rgba(248,113,113,0.3)"}`,
-              borderRadius: "9999px",
-              padding: "0.15rem 0.6rem",
-              fontWeight: 500,
-            }}
-          >
-            {project.status}
-          </span>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <h3 style={{ 
+          fontSize: "1.25rem", 
+          fontWeight: 700, 
+          color: "white",
+          letterSpacing: "-0.01em"
+        }}>
+          {project.title}
+        </h3>
+        <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
+          {project.link && (
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                color: hovered ? "#818cf8" : "#94a3b8",
+                transition: "color 0.3s ease"
+              }}
+            >
+              <Github size={20} />
+            </a>
+          )}
+          {project.status && (
+            <span
+              style={{
+                fontSize: "0.65rem",
+                color: project.status === "Active" ? "#4ade80" : "#f87171",
+                background: project.status === "Active" ? "rgba(74,222,128,0.1)" : "rgba(248,113,113,0.1)",
+                border: `1px solid ${project.status === "Active" ? "rgba(74,222,128,0.2)" : "rgba(248,113,113,0.2)"}`,
+                borderRadius: "9999px",
+                padding: "0.2rem 0.6rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.05em"
+              }}
+            >
+              {project.status}
+            </span>
+          )}
         </div>
-      )}
+      </div>
 
-      <h3 style={{ fontSize: "1.125rem", fontWeight: 600, color: "white" }}>
-        {project.title}
-      </h3>
-
-      <p style={{ fontSize: "0.875rem", color: "#94a3b8", lineHeight: 1.7 }}>
+      <p style={{ 
+        fontSize: "0.95rem", 
+        color: "#94a3b8", 
+        lineHeight: 1.6,
+        marginBottom: "0.5rem"
+      }}>
         {project.description}
       </p>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "auto" }}>
+      <div style={{ 
+        display: "flex", 
+        flexWrap: "wrap", 
+        gap: "0.6rem", 
+        marginTop: "auto",
+        paddingTop: "1rem"
+      }}>
         {project.tags.map((tag) => (
           <span
             key={tag}
             style={{
               fontSize: "0.7rem",
-              color: "#94a3b8",
-              background: "rgba(255,255,255,0.06)",
-              borderRadius: "9999px",
-              padding: "0.2rem 0.65rem",
+              color: hovered ? "#818cf8" : "#cbd5e1",
+              background: hovered ? "rgba(129, 140, 248, 0.1)" : "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.05)",
+              borderRadius: "0.5rem",
+              padding: "0.3rem 0.75rem",
               fontWeight: 500,
+              transition: "all 0.3s ease"
             }}
           >
             {tag}
