@@ -6,20 +6,20 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "ZINCxNH",
+    description:
+      "Advanced AI code reviewer platform where users can input their code and receive real-time feedback from state-of-the-art AI models for better updates and code quality.",
+    tags: ["AI/ML", "React", "Code Review", "LLM"],
+    status: "Completed",
+    link: "https://github.com/25f3002130/ai-code-reviewer",
+  },
+  {
     title: "MediaPull",
     description:
       "A universal media downloader platform. Currently supports YouTube and Instagram, with ongoing development to support 500+ websites including X (Twitter), TikTok, and more.",
     tags: ["Next.js", "Python", "Media", "API"],
     status: "Active",
     link: "https://github.com/25f3002130/MediaPull",
-  },
-  {
-    title: "ZINCxNH",
-    description:
-      "Advanced AI code reviewer platform where users can input their code and receive real-time feedback from state-of-the-art AI models for better updates and code quality.",
-    tags: ["AI/ML", "React", "Code Review", "LLM"],
-    status: "Active",
-    link: "https://github.com/25f3002130/ai-code-reviewer",
   },
   {
     title: "United Earth Labs",
@@ -166,9 +166,9 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
             <span
               style={{
                 fontSize: "0.65rem",
-                color: project.status === "Active" ? "#4ade80" : "#f87171",
-                background: project.status === "Active" ? "rgba(74,222,128,0.1)" : "rgba(248,113,113,0.1)",
-                border: `1px solid ${project.status === "Active" ? "rgba(74,222,128,0.2)" : "rgba(248,113,113,0.2)"}`,
+                color: project.status === "Completed" ? "#818cf8" : project.status === "Active" ? "#4ade80" : "#f87171",
+                background: project.status === "Completed" ? "rgba(129, 140, 248, 0.1)" : project.status === "Active" ? "rgba(74,222,128,0.1)" : "rgba(248,113,113,0.1)",
+                border: `1px solid ${project.status === "Completed" ? "rgba(129, 140, 248, 0.2)" : project.status === "Active" ? "rgba(74,222,128,0.2)" : "rgba(248,113,113,0.2)"}`,
                 borderRadius: "9999px",
                 padding: "0.2rem 0.6rem",
                 fontWeight: 600,
