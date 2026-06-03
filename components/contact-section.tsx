@@ -141,7 +141,7 @@ export default function ContactSection() {
         {/* Social Links */}
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
           <a
-            href="https://github.com/dialga-cmd"
+            href="https://github.com/25f3002130"
             target="_blank"
             rel="noopener noreferrer"
             style={{
