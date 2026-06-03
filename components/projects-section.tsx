@@ -5,6 +5,14 @@ import { RevealWaveImage } from "@/components/reveal-wave-image";
 import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
+    {
+    title: "GUN-112",
+    description:
+      "A military grade pdf encryption protocol using 5 layer security and a custom protocol named GKP (Ghost Key Protocol) to ensure encryption and safety.",
+    tags: ["Pthton","IdentityManager", "CryptoEngine","KeyManager","SecurityLayer"],
+    status: "Completed",
+    link: "https://github.com/25f3002130/GUN-112.git",
+  },
   {
     title: "ZINCxNH",
     description:
@@ -34,18 +42,6 @@ const projects = [
       "A free-to-use platform where students can learn tech — no paywalls, no barriers. Education should be accessible to everyone.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     status: "Active",
-  },
-  {
-    title: "Game Collection",
-    description:
-      "Multiple games built from scratch because I couldn't find the games I wanted to play. If it doesn't exist, build it.",
-    tags: ["Unity", "C#", "Game Design"],
-  },
-  {
-    title: "3D Models & Renders",
-    description:
-      "A collection of 3D models, animations, and photorealistic renders created across various personal and creative projects.",
-    tags: ["Blender", "3D Art", "Animation"],
   },
 ];
 
